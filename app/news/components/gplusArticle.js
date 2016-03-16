@@ -5,6 +5,6 @@ angular.module('gdgXBoomerang')
             article: '=',
             attachment: '='
         },
-        templateUrl: '/app/news/components/gplusArticle.html'
+        templateUrl: 'app/news/components/gplusArticle.html'
     };
 });

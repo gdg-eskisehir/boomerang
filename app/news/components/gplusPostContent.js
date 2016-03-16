@@ -2,6 +2,6 @@ angular.module('gdgXBoomerang')
 .directive('gplusPostContent', function () {
     return {
         transclude: true,
-        templateUrl: '/app/news/components/gplusPostContent.html'
+        templateUrl: 'app/news/components/gplusPostContent.html'
     };
 });
