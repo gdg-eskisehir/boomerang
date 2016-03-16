@@ -48,23 +48,23 @@ angular.module('gdgXBoomerang')
 .factory('Config', function () {
     return {
         // TODO Modify these to configure your app
-        'name'          : 'GDG Space Coast',
-        'id'            : '103959793061819610212',
-        'googleApi'     : 'AIzaSyA9ALjr2iWvhf3Rsz9-bH0cEcDcrdkpuAg',
+        'name'          : 'GDG Eskisehir',
+        'id'            : '115602346615910585045',
+        'googleApi'     : 'AIzaSyC0aDq5COgY4tfTXY2vNs3-UrdmKeIbuL0',
         'pwaId'         : '5915725140705884785', // Picasa Web Album id, must belong to Google+ id above
-        'domain'        : 'http://www.gdgspacecoast.org',
-        'twitter'       : 'gdgspacecoast',
-        'facebook'      : 'gdgspacecoast',
-        'youtube'       : 'UCkiYHK3IZMk5XsYZ626b9Rw',
-        'meetup'        : 'gdgspacecoast',
+        'domain'        : 'http://www.gdgeskisehir.com',
+        'twitter'       : 'GdgEskisehir',
+        'facebook'      : 'GdgEskisehir',
+        'youtube'       : '',
+        'meetup'        : '',
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
-        'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
+        'dateFormat'    : 'EEEE, d MMMM y - h:mm a',
         'cover' : {
-            title: 'Android Development for Beginners',
-            subtitle: 'Google Developers Study Jams is a free series of global, community-run, in-person study groups.',
+            title: 'Worldwide GDG Events',
+            subtitle: 'Directory of developer events organized by tags and displayed on a global map.',
             button: {
-                text: 'Learn More',
-                url: 'http://developerstudyjams.com/'
+                text: 'Find local events',
+                url: 'http://gdg.events/'
             }
         },
         'activities': {
@@ -148,27 +148,27 @@ angular.module('gdgXBoomerang')
             description: 'These talks are a grassroots-style series of presentation given by various ' +
                 'technical experts spanning a wide spectrum of topics in technology and related areas.',
             color: 'purple',
-            icon: 'app/images/icons/ic_mic_48px.svg'
+            icon: '/app/images/icons/ic_mic_48px.svg'
         },
         roundTables: {
             name: 'Round Tables',
             description: 'Free-form, community-focused events where all attendees can raise topics for discussion.',
             color: 'darkBlue',
-            icon: 'app/images/icons/ic_local_pizza_48px.svg'
+            icon: '/app/images/icons/ic_local_pizza_48px.svg'
         },
         codeLabs: {
             name: 'Code Labs',
             description: 'Specially prepared to provide step-by-step instructions, these events focus on ' +
                 'introducing new technology and maximizing hands-on learning.',
             color: 'green',
-            icon: 'app/images/icons/ic_code_48px.svg'
+            icon: '/app/images/icons/ic_code_48px.svg'
         },
         devFests: {
             name: 'Dev Fests',
             description: 'GDG Dev Fests are large scale, community-run events that offer speaker sessions ' +
                 'across single or multiple product areas, hackathons, code labs, and more...',
             color: 'deepBlue',
-            icon: 'app/images/icons/ic_event_48px.svg'
+            icon: '/app/images/icons/ic_event_48px.svg'
         },
         appClinics: {
             name: 'App Clinics',
@@ -176,21 +176,21 @@ angular.module('gdgXBoomerang')
                 'usability experts to evaluate specific apps with a focus on constructive criticism, ' +
                 'problem solving, and collaboration.',
             color: 'yellow',
-            icon: 'app/images/icons/ic_local_hospital_48px.svg'
+            icon: '/app/images/icons/ic_local_hospital_48px.svg'
         },
         panels: {
             name: 'Panels',
             description: 'These events bring together multiple experts on a topic. The formats can vary from ' +
                 'moderator-led Q&A, debate, focused or free-form discussion, to audience Q&A.',
             color: 'lightPurple',
-            icon: 'app/images/icons/ic_people_48px.svg'
+            icon: '/app/images/icons/ic_people_48px.svg'
         },
         hackathons: {
             name: 'Hackathons',
             description: 'Events where cross-disciplined teams collaborate intensively on specific projects ' +
                 'or challenges. They often involve timed demonstrations and competition for prizes.',
             color: 'red',
-            icon: 'app/images/icons/ic_timer_48px.svg'
+            icon: '/app/images/icons/ic_timer_48px.svg'
         },
         designSprints: {
             name: 'Design Sprints',
@@ -198,7 +198,7 @@ angular.module('gdgXBoomerang')
                 'Iterate through the various phases of understanding, sketching, deciding, prototyping, ' +
                 'and testing.',
             color: 'pink',
-            icon: 'app/images/icons/ic_directions_run_48px.svg'
+            icon: '/app/images/icons/ic_directions_run_48px.svg'
         }
     };
 
@@ -501,6 +501,90 @@ angular.module('gdgXBoomerang')
         });
 });
 
+angular.module('gdgXBoomerang')
+.directive('gplusAlbum', function () {
+    return {
+        scope: {
+            article: '=',
+            attachment: '='
+        },
+        templateUrl: '/app/news/components/gplusAlbum.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('gplusArticle', function () {
+    return {
+        scope: {
+            article: '=',
+            attachment: '='
+        },
+        templateUrl: '/app/news/components/gplusArticle.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('gplusEvent', function () {
+    return {
+        scope: { article: '=' },
+        templateUrl: '/app/news/components/gplusEvent.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('gplusNoAttachments', function () {
+    return {
+        scope: { article: '=' },
+        templateUrl: '/app/news/components/gplusNoAttachments.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('gplusPhotoVideo', function () {
+    return {
+        scope: {
+            article: '=',
+            attachment: '='
+        },
+        templateUrl: '/app/news/components/gplusPhotoVideo.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('gplusPostContent', function () {
+    return {
+        transclude: true,
+        templateUrl: '/app/news/components/gplusPostContent.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('gplusPostImage', function () {
+    return {
+        templateUrl: '/app/news/components/gplusPostImage.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('gplusPostVideo', function ($sce) {
+    return {
+        link: function (scope, element) {
+            scope.videoUrl = $sce.trustAsResourceUrl(scope.attachment.embed.url);
+            scope.getDynamicHeight = function () {
+                return (element.prop('clientWidth') * 0.6) + 'px';
+            };
+        },
+        templateUrl: '/app/news/components/gplusPostVideo.html'
+    };
+});
+
+angular.module('gdgXBoomerang')
+.directive('newsItemFooter', function () {
+    return {
+        templateUrl: '/app/news/components/newsItemFooter.html'
+    };
+});
+
 'use strict';
 
 angular.module('gdgXBoomerang')
@@ -525,89 +609,5 @@ angular.module('gdgXBoomerang')
                 }
             });
         }
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusAlbum', function () {
-    return {
-        scope: {
-            article: '=',
-            attachment: '='
-        },
-        templateUrl: 'app/news/components/gplusAlbum.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusArticle', function () {
-    return {
-        scope: {
-            article: '=',
-            attachment: '='
-        },
-        templateUrl: 'app/news/components/gplusArticle.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusEvent', function () {
-    return {
-        scope: { article: '=' },
-        templateUrl: 'app/news/components/gplusEvent.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusNoAttachments', function () {
-    return {
-        scope: { article: '=' },
-        templateUrl: 'app/news/components/gplusNoAttachments.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusPhotoVideo', function () {
-    return {
-        scope: {
-            article: '=',
-            attachment: '='
-        },
-        templateUrl: 'app/news/components/gplusPhotoVideo.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusPostContent', function () {
-    return {
-        transclude: true,
-        templateUrl: 'app/news/components/gplusPostContent.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusPostImage', function () {
-    return {
-        templateUrl: 'app/news/components/gplusPostImage.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('gplusPostVideo', function ($sce) {
-    return {
-        link: function (scope, element) {
-            scope.videoUrl = $sce.trustAsResourceUrl(scope.attachment.embed.url);
-            scope.getDynamicHeight = function () {
-                return (element.prop('clientWidth') * 0.6) + 'px';
-            };
-        },
-        templateUrl: 'app/news/components/gplusPostVideo.html'
-    };
-});
-
-angular.module('gdgXBoomerang')
-.directive('newsItemFooter', function () {
-    return {
-        templateUrl: 'app/news/components/newsItemFooter.html'
     };
 });

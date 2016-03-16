@@ -2,17 +2,17 @@ angular.module('gdgXBoomerang')
 .factory('Config', function () {
     return {
         // TODO Modify these to configure your app
-        'name'          : 'GDG Space Coast',
-        'id'            : '103959793061819610212',
-        'googleApi'     : 'AIzaSyA9ALjr2iWvhf3Rsz9-bH0cEcDcrdkpuAg',
+        'name'          : 'GDG Eskisehir',
+        'id'            : '115602346615910585045',
+        'googleApi'     : 'AIzaSyC0aDq5COgY4tfTXY2vNs3-UrdmKeIbuL0',
         'pwaId'         : '5915725140705884785', // Picasa Web Album id, must belong to Google+ id above
-        'domain'        : 'http://www.gdgspacecoast.org',
-        'twitter'       : 'gdgspacecoast',
-        'facebook'      : 'gdgspacecoast',
-        'youtube'       : 'UCkiYHK3IZMk5XsYZ626b9Rw',
-        'meetup'        : 'gdgspacecoast',
+        'domain'        : 'http://www.gdgeskisehir.com',
+        'twitter'       : 'GdgEskisehir',
+        'facebook'      : 'GdgEskisehir',
+        'youtube'       : '',
+        'meetup'        : '',
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
-        'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
+        'dateFormat'    : 'EEEE, d MMMM y - h:mm a',
         'cover' : {
             title: 'Android Development for Beginners',
             subtitle: 'Google Developers Study Jams is a free series of global, community-run, in-person study groups.',
